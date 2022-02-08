@@ -1,4 +1,5 @@
-# Django parsing with api https://docs.etherscan.io/ to create bar, pie and line charts.
+# Django parsing with api https://docs.etherscan.io/.
+# Chart.js to create bar, pie and line charts.
 This project was created as the assignment 2 for the Advanced Programming 2 course. 
 It is a website where you can see Top-100 accounts on https://etherscan.io/accounts/ in 3 different charts such as Bar chart, Line Chart, Pie Chart. 
 Connected database: PostgreSQL
