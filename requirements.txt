@@ -1,4 +1,2 @@
-beautifulsoup4==4.10.0
-etherscan-python==2.1.0
-chartjs==v3.7.0(or add link https://www.chartjs.org/docs/latest/getting-started/installation.html)
-psycopg2==2.9.3(if you use postgresql as Database)
+tensorflow == 2.5.0
+keras == 2.7.0 

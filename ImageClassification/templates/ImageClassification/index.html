@@ -1,0 +1,39 @@
+{% extends 'partials/home.html' %}
+
+{% block content %}
+     <div class="container">
+
+          <!--Simple Form-->
+          <h2 class="my-4">Add image</h2>
+          <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+                <input type="file" name="upload" accept="image/*">
+                <br>
+                <button class="btn btn-dark my-4" type="submit">Submit</button>
+          </form>
+        <h2 class="my-4">Result</h2>
+          <div class="row">
+            {% if result %}
+            <div class="col-lg-4 col-md-6 col-sm-12 pb-4">
+              <h3> {{result}} </h3> 
+              <br>
+            {% else %}
+            <p>No result</p>
+            {% endif %}
+          </div>
+          <h2 class="my-4">Your image</h2>
+          <div class="row">
+            {% if file_url %}
+            <div class="col-lg-4 col-md-6 col-sm-12 pb-4">
+              <img src="{{ file_url }}" class="img-fluid">
+              <br>
+            {% else %}
+            <p>No movies posters added.</p>
+              
+            {% endif %}
+          </div>
+        </div>
+     </div>
+    </div>
+
+{% endblock %}
