@@ -1,1 +1,1 @@
-web: gunicorn ImageClassification:app --log-file=-
+web: gunicorn FinalProject.wsgi
