@@ -4,6 +4,7 @@ from django.core.files.storage import FileSystemStorage
 from .models import Info
 
 from django.conf import settings 
+import numpy as np
 
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 from tensorflow.keras.models import load_model
@@ -20,7 +21,8 @@ def load_image(filename):
 def predict(image_path):
 	image = load_image(image_path)
 	model = load_model('ImageClassification/models/current.h5')
-	result = model.predict_classes(image)
+	
+	result=np.argmax(model.predict(image),axis=1)
 	return labels[result[0]]	
 
 def index(request):
