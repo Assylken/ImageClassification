@@ -28,4 +28,4 @@ from tensorflow.keras.optimizers import SGD
 
 ### Examples
 Home Page: <br />
-<img src="/images/image_screen.png" width="600" height="300"/> <br />
+<img src="/images/image_screen.png" width="300" height="300"/> <br />
